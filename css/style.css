@@ -16,7 +16,7 @@
 
 @media (max-width: 479.5px) {
   .father-body {
-    background-color: #000000;
+    background: linear-gradient(88deg, #3a3d40 0%, #181719 100%);
     width: 100%;
     height: 100vh;
     display: grid;
@@ -36,7 +36,7 @@
   #sectionhead {
     grid-area: head;
     /* border: solid 1px black; */
-    background-color: #fc9c64;
+    background: linear-gradient(88deg, #ca6732 0%, #fc9c64 100%);
   }
 
   .header-title-style {
@@ -44,6 +44,8 @@
     font-family: "Roboto", sans-serif;
     font-size: 30px;
     text-align: center;
+    animation-name: fade;
+    animation-duration: 1s;
   }
 
   .header-slogan-style {
@@ -53,12 +55,24 @@
     font-size: 15px;
     text-align: center;
     color: rgb(255, 255, 255);
+    animation-name: fade;
+    animation-duration: 1s;
+  }
+
+  @keyframes fade {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
   }
 
   #sectionmenu {
     grid-area: naveg;
     font-family: "Roboto", sans-serif;
-    background-color: #fc9c64;
+    background: linear-gradient(88deg, #ca6732 0%, #fc9c64 100%);
     border-right: 1px solid #000000;
     /* border: solid 1px black; */
   }
@@ -81,6 +95,21 @@
     border: 2px solid #6484fc;
     border-radius: 50%;
   }
+  .menu-img-logo-style {
+    transition: 0.5s;
+  }
+
+  .menu-img-logo-style:hover {
+    transform: rotate(360deg);
+  }
+
+  .menu-list-link-style {
+    transition: font-size 0.3s;
+  }
+
+  .menu-list-link-style:hover {
+    font-size: 0.75em;
+  }
 
   .menu-list-style {
     list-style-type: square;
@@ -88,8 +117,18 @@
     flex-direction: column;
     text-align: center;
     justify-content: space-evenly;
+    animation-name: movimientomenu;
+    animation-duration: 1.2s;
   }
 
+  @keyframes movimientomenu {
+    0% {
+      transform: translateY(110vh);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
   aside > nav > ul > li {
     margin: 10px;
   }
@@ -100,6 +139,14 @@
     color: white;
     border: solid 2px rgb(255, 255, 255);
     padding: 4px;
+  }
+
+  .menu-list-link-style {
+    transition: font-size 0.3s;
+  }
+
+  .menu-list-link-style:hover {
+    font-size: 0.65em;
   }
 
   #sectionhero {
@@ -129,7 +176,7 @@
 
   #sectionfooter {
     grid-area: footer;
-    background-color: #fc9c64;
+    background: linear-gradient(88deg, #ca6732 0%, #fc9c64 100%);
     /* border: solid 1px black; */
   }
 
@@ -147,6 +194,15 @@
     max-width: 100%;
     max-height: 100%;
   }
+
+  .footer-img-logo {
+    transition: 0.5s;
+  }
+
+  .footer-img-logo:hover {
+    transform: rotate(360deg);
+  }
+
   .footer-area-list {
     font-family: "Roboto", sans-serif;
     font-size: 12px;
@@ -155,6 +211,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .footer-area-list {
+    transition: font-size 0.3s;
+  }
+
+  .footer-area-list:hover {
+    font-size: 13px;
   }
 
   .footer-links {
@@ -259,7 +323,7 @@
 
 @media (min-width: 479.6px) and (max-width: 699.5px) {
   .father-body {
-    background-color: #000000;
+    background: linear-gradient(88deg, #3a3d40 0%, #181719 100%);
     width: 100%;
     height: 100vh;
     display: grid;
@@ -279,7 +343,7 @@
   #sectionhead {
     grid-area: head;
     /* border: solid 1px black; */
-    background-color: #fc9c64;
+    background: linear-gradient(88deg, #ca6732 0%, #fc9c64 100%);
   }
 
   .header-title-style {
@@ -287,6 +351,8 @@
     font-family: "Roboto", sans-serif;
     font-size: 40px;
     text-align: center;
+    animation-name: fade;
+    animation-duration: 1s;
   }
 
   .header-slogan-style {
@@ -296,12 +362,23 @@
     font-size: 20px;
     text-align: center;
     color: rgb(255, 255, 255);
+    animation-name: fade;
+    animation-duration: 1s;
   }
 
+  @keyframes fade {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
   #sectionmenu {
     grid-area: naveg;
     font-family: "Roboto", sans-serif;
-    background-color: #fc9c64;
+    background: linear-gradient(88deg, #ca6732 0%, #fc9c64 100%);
     border-right: 1px solid #000000;
     /* border: solid 1px black; */
   }
@@ -324,12 +401,31 @@
     border: 2px solid #6484fc;
     border-radius: 50%;
   }
+
+  .menu-img-logo-style {
+    transition: 0.5s;
+  }
+
+  .menu-img-logo-style:hover {
+    transform: rotate(360deg);
+  }
   .menu-list-style {
     list-style-type: square;
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: space-evenly;
+    animation-name: movimientomenu;
+    animation-duration: 1.2s;
+  }
+
+  @keyframes movimientomenu {
+    0% {
+      transform: translateY(110vh);
+    }
+    100% {
+      transform: translateY(0px);
+    }
   }
 
   aside > nav > ul > li {
@@ -342,6 +438,14 @@
     color: white;
     border: solid 2px rgb(255, 255, 255);
     padding: 4px;
+  }
+
+  .menu-list-link-style {
+    transition: font-size 0.3s;
+  }
+
+  .menu-list-link-style:hover {
+    font-size: 0.75em;
   }
 
   #sectionhero {
@@ -371,7 +475,7 @@
 
   #sectionfooter {
     grid-area: footer;
-    background-color: #fc9c64;
+    background: linear-gradient(88deg, #ca6732 0%, #fc9c64 100%);
     /* border: solid 1px black; */
   }
 
@@ -389,6 +493,14 @@
     max-width: 100%;
     max-height: 100%;
   }
+
+  .footer-img-logo {
+    transition: 0.5s;
+  }
+
+  .footer-img-logo:hover {
+    transform: rotate(360deg);
+  }
   .footer-area-list {
     font-family: "Roboto", sans-serif;
     font-size: 14px;
@@ -397,6 +509,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .footer-area-list {
+    transition: font-size 0.3s;
+  }
+
+  .footer-area-list:hover {
+    font-size: 16px;
   }
 
   .footer-links {
@@ -505,7 +625,7 @@
 
 @media (min-width: 699.6px) and (max-width: 1023.5px) {
   .father-body {
-    background-color: #000000;
+    background: linear-gradient(88deg, #3a3d40 0%, #181719 100%);
     width: 100%;
     height: 100vh;
     display: grid;
@@ -525,7 +645,7 @@
   #sectionhead {
     grid-area: head;
     /* border: solid 1px black; */
-    background-color: #fc9c64;
+    background: linear-gradient(88deg, #ca6732 0%, #fc9c64 100%);
   }
 
   .header-title-style {
@@ -533,6 +653,8 @@
     font-family: "Roboto", sans-serif;
     font-size: 40px;
     text-align: center;
+    animation-name: fade;
+    animation-duration: 1s;
   }
 
   .header-slogan-style {
@@ -542,12 +664,24 @@
     font-size: 20px;
     text-align: center;
     color: rgb(255, 255, 255);
+    animation-name: fade;
+    animation-duration: 1s;
+  }
+
+  @keyframes fade {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
   }
 
   #sectionmenu {
     grid-area: naveg;
     font-family: "Roboto", sans-serif;
-    background-color: #fc9c64;
+    background: linear-gradient(88deg, #ca6732 0%, #fc9c64 100%);
     border-right: 1px solid #000000;
     /* border: solid 1px black; */
   }
@@ -570,14 +704,32 @@
     border: 2px solid #6484fc;
     border-radius: 50%;
   }
+
+  .menu-img-logo-style {
+    transition: 0.5s;
+  }
+
+  .menu-img-logo-style:hover {
+    transform: rotate(360deg);
+  }
   .menu-list-style {
     list-style-type: square;
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: space-evenly;
+    animation-name: movimientomenu;
+    animation-duration: 1.2s;
   }
 
+  @keyframes movimientomenu {
+    0% {
+      transform: translateY(110vh);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
   aside > nav > ul > li {
     margin: 10px;
   }
@@ -588,6 +740,14 @@
     color: white;
     border: solid 2px rgb(255, 255, 255);
     padding: 6px;
+  }
+
+  .menu-list-link-style {
+    transition: font-size 0.3s;
+  }
+
+  .menu-list-link-style:hover {
+    font-size: 18px;
   }
 
   #sectionhero {
@@ -617,7 +777,7 @@
 
   #sectionfooter {
     grid-area: footer;
-    background-color: #fc9c64;
+    background: linear-gradient(88deg, #ca6732 0%, #fc9c64 100%);
     /* border: solid 1px black; */
   }
 
@@ -634,6 +794,15 @@
     max-width: 100%;
     max-height: 100%;
   }
+
+  .footer-img-logo {
+    transition: 0.5s;
+  }
+
+  .footer-img-logo:hover {
+    transform: rotate(360deg);
+  }
+
   .footer-area-list {
     font-family: "Roboto", sans-serif;
     font-size: 15px;
@@ -643,7 +812,13 @@
     justify-content: center;
     align-items: center;
   }
+  .footer-area-list {
+    transition: font-size 0.3s;
+  }
 
+  .footer-area-list:hover {
+    font-size: 17px;
+  }
   .footer-links {
     color: white;
     text-decoration: none;
@@ -753,7 +928,7 @@
 
 @media (min-width: 1023.6px) {
   .father-body {
-    background-color: #6484fc;
+    background: linear-gradient(88deg, #28496a 0%, #6484fc 100%);
     width: 100%;
     height: 100vh;
     display: grid;
@@ -773,7 +948,7 @@
   #sectionhead {
     grid-area: head;
     /* border: solid 1px black; */
-    background-color: #fc9c64;
+    background: linear-gradient(88deg, #ca6732 0%, #fc9c64 100%);
   }
 
   .header-title-style {
@@ -781,6 +956,8 @@
     font-family: "Roboto", sans-serif;
     font-size: 50px;
     text-align: center;
+    animation-name: fade;
+    animation-duration: 1s;
   }
 
   .header-slogan-style {
@@ -789,12 +966,24 @@
     font-weight: 600;
     text-align: center;
     color: rgb(255, 255, 255);
+    animation-name: fade;
+    animation-duration: 1s;
+  }
+
+  @keyframes fade {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
   }
 
   #sectionmenu {
     grid-area: naveg;
     font-family: "Roboto", sans-serif;
-    background-color: #fc9c64;
+    background: linear-gradient(88deg, #ca6732 0%, #fc9c64 100%);
     border-right: 1px solid #000000;
     /* border: solid 1px black; */
   }
@@ -817,6 +1006,13 @@
     border: 2px solid #6484fc;
     border-radius: 50%;
   }
+  .menu-img-logo-style {
+    transition: 0.5s;
+  }
+
+  .menu-img-logo-style:hover {
+    transform: rotate(360deg);
+  }
 
   .menu-list-style {
     list-style-type: square;
@@ -824,15 +1020,34 @@
     flex-direction: column;
     text-align: center;
     justify-content: space-evenly;
+    animation-name: movimientomenu;
+    animation-duration: 1.2s;
+  }
+
+  @keyframes movimientomenu {
+    0% {
+      transform: translateY(110vh);
+    }
+    100% {
+      transform: translateY(0px);
+    }
   }
 
   aside > nav > ul > li {
     margin: 10px;
     border: solid 2px rgb(255, 255, 255);
   }
+
   .menu-list-link-style {
     text-align: center;
     color: white;
+  }
+  .menu-list-link-style {
+    transition: font-size 0.3s;
+  }
+
+  .menu-list-link-style:hover {
+    font-size: 20px;
   }
 
   #sectionhero {
@@ -861,7 +1076,7 @@
 
   #sectionfooter {
     grid-area: footer;
-    background-color: #fc9c64;
+    background: linear-gradient(88deg, #ca6732 0%, #fc9c64 100%);
     /* border: solid 1px black; */
   }
 
@@ -878,6 +1093,13 @@
     max-width: 100%;
     max-height: 100%;
   }
+  .footer-img-logo {
+    transition: 0.5s;
+  }
+
+  .footer-img-logo:hover {
+    transform: rotate(360deg);
+  }
   .footer-area-list {
     font-family: "Roboto", sans-serif;
     margin: 20px 0px 20px 0px;
@@ -885,6 +1107,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .footer-area-list {
+    transition: font-size 0.3s;
+  }
+
+  .footer-area-list:hover {
+    font-size: 20px;
   }
 
   .footer-links {
