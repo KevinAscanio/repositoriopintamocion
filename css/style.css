@@ -1,1204 +1,525 @@
+/*FUENTE Y SELECTOR GLOBAL*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 @font-face {
   font-family: "Roboto";
   src: url("../fuentes/Roboto/Roboto-Regular.ttf");
 }
-
-/*ESTILOS SMARTPHONE*/
-/*ESTILOS SMARTPHONE*/
-/*ESTILOS SMARTPHONE*/
-/*ESTILOS SMARTPHONE*/
-/*ESTILOS SMARTPHONE*/
-
-@media (max-width: 479.5px) {
-  .father-body {
-    background: linear-gradient(88deg, #3a3d40 0%, #181719 100%);
-    width: 100%;
-    height: 100vh;
-    display: grid;
-
-    grid-template-areas:
-      "naveg head"
-      "naveg hero"
-      "naveg videos"
-      "naveg footer";
-
-    grid-template-columns: 1fr 6fr;
-    grid-template-rows: 1fr 4fr 4fr 1fr;
+/*VARIABLES*/
+/*VERSION MOBILE*/
+.father-body {
+  background: linear-gradient(88deg, #3a3d40 0%, #181719 100%);
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-areas: "naveg head" "naveg hero" "naveg videos" "naveg footer";
+  grid-template-columns: 1fr 6fr;
+  grid-template-rows: 1fr 4fr 4fr 1fr;
+  /* Tengo una duda sobre esta categoria que esta mas abajo como puedo reescribirla! pero haciendo nesting recuerda preguntar*/
+}
+.father-body #sectionhead {
+  grid-area: head;
+  background: linear-gradient(88deg, #ca6732 0%, #fc9c64 100%);
+}
+.father-body #sectionhead .header-title-style {
+  color: rgb(255, 255, 255);
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  text-align: center;
+  animation-name: fade;
+  animation-duration: 1s;
+}
+.father-body #sectionhead .header-slogan-style {
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+  font-weight: 200;
+  font-size: 15px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  animation-name: fade;
+  animation-duration: 1s;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
   }
-
-  /* GRID IDS*/
-
-  #sectionhead {
-    grid-area: head;
-    /* border: solid 1px black; */
-    background: linear-gradient(88deg, #ca6732 0%, #fc9c64 100%);
+  100% {
+    opacity: 1;
   }
-
-  .header-title-style {
-    color: rgb(255, 255, 255);
-    font-family: "Roboto", sans-serif;
-    font-size: 30px;
-    text-align: center;
-    animation-name: fade;
-    animation-duration: 1s;
+}
+.father-body #sectionmenu {
+  grid-area: naveg;
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(88deg, #ca6732 0%, #fc9c64 100%);
+  border-right: 1px solid #000000;
+}
+.father-body .navcontainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.father-body .navcontainer .menu-img-logo-style-size {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 20px auto;
+}
+.father-body .navcontainer .menu-img-logo-style-size .menu-img-logo-style {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+  border: 2px solid #6484fc;
+  border-radius: 50%;
+}
+.father-body .navcontainer .menu-img-logo-style-size .menu-img-logo-style {
+  transition: 0.5s;
+}
+.father-body .navcontainer .menu-img-logo-style-size .menu-img-logo-style:hover {
+  transform: rotate(360deg);
+}
+.father-body .menu-list-style {
+  list-style-type: square;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-evenly;
+  animation-name: movimientomenu;
+  animation-duration: 1.2s;
+}
+.father-body .menu-list-style .menu-list-link-style {
+  display: flex;
+  justify-content: center;
+  font-size: 0.6em;
+  color: white;
+  border: solid 2px rgb(255, 255, 255);
+  padding: 4px;
+}
+.father-body .menu-list-style .menu-list-link-style {
+  transition: font-size 0.3s;
+}
+.father-body .menu-list-style .menu-list-link-style:hover {
+  font-size: 0.67em;
+}
+@keyframes movimientomenu {
+  0% {
+    transform: translateY(110vh);
   }
-
-  .header-slogan-style {
-    font-family: "Roboto", sans-serif;
-    font-style: italic;
-    font-weight: 200;
-    font-size: 15px;
-    text-align: center;
-    color: rgb(255, 255, 255);
-    animation-name: fade;
-    animation-duration: 1s;
+  100% {
+    transform: translateY(0px);
   }
-
-  @keyframes fade {
-    0% {
-      opacity: 0;
-    }
-
-    100% {
-      opacity: 1;
-    }
+}
+.father-body .menu-list-link-style {
+  transition: font-size 0.3s;
+}
+.father-body .menu-list-link-style:hover {
+  font-size: 0.75em;
+}
+.father-body aside > nav > ul > li {
+  margin: 10px;
+}
+.father-body #sectionhero {
+  grid-area: hero;
+  width: 100%;
+  padding: 0px 10px;
+}
+.father-body #sectionhero .main-hero-img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.father-body #sectionhero .main-area-titles {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 25px;
+  margin: 20px;
+  color: rgb(255, 255, 255);
+}
+.father-body #sectionvideos {
+  grid-area: videos;
+  /*ESTE CONTAINER ES DE UNOS ESTILOS DE CONCEPT ART*/
+  /*ESTE CONTAINER ES DE UNOS ESTILOS DE QUIENES SOMOS*/
+  /*ESTE CONTAINER DE ABAJO ES DE UNOS ESTILOS DE CONTACTO*/
+  /*ESTE QUE SIGUE ES DE UNOS ESTILOS DE AYUDA*/
+}
+.father-body #sectionvideos .main-categories {
+  font-family: "Roboto", sans-serif;
+  margin: 10px 10px;
+  padding: 10px 10px;
+  font-size: 12px;
+  color: white;
+}
+.father-body #sectionvideos .main-categories .categorie-title:hover {
+  animation-name: titulo;
+  animation-duration: 0.3s;
+  cursor: pointer;
+}
+@keyframes titulo {
+  0% {
+    transform: translateY(0px);
   }
-
-  #sectionmenu {
-    grid-area: naveg;
-    font-family: "Roboto", sans-serif;
-    background: linear-gradient(88deg, #ca6732 0%, #fc9c64 100%);
-    border-right: 1px solid #000000;
-    /* border: solid 1px black; */
+  50% {
+    transform: translateY(-2px);
   }
-  .navcontainer {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+  100% {
+    transform: translateY(0px);
   }
-
-  .menu-img-logo-style-size {
-    display: block;
-    width: 30px;
-    height: 30px;
-    margin: 20px auto;
-  }
-  .menu-img-logo-style {
-    max-width: 100%;
-    max-height: 100%;
-    margin: 0 auto;
-    border: 2px solid #6484fc;
-    border-radius: 50%;
-  }
-  .menu-img-logo-style {
-    transition: 0.5s;
-  }
-
-  .menu-img-logo-style:hover {
-    transform: rotate(360deg);
-  }
-
-  .menu-list-link-style {
-    transition: font-size 0.3s;
-  }
-
-  .menu-list-link-style:hover {
-    font-size: 0.75em;
-  }
-
-  .menu-list-style {
-    list-style-type: square;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: space-evenly;
-    animation-name: movimientomenu;
-    animation-duration: 1.2s;
-  }
-
-  @keyframes movimientomenu {
-    0% {
-      transform: translateY(110vh);
-    }
-    100% {
-      transform: translateY(0px);
-    }
-  }
-  aside > nav > ul > li {
-    margin: 10px;
-  }
-  .menu-list-link-style {
-    display: flex;
-    justify-content: center;
-    font-size: 0.6em;
-    color: white;
-    border: solid 2px rgb(255, 255, 255);
-    padding: 4px;
-  }
-
-  .menu-list-link-style {
-    transition: font-size 0.3s;
-  }
-
-  .menu-list-link-style:hover {
-    font-size: 0.65em;
-  }
-
-  #sectionhero {
-    grid-area: hero;
-    /* border: solid 1px black; */
-    width: 100%;
-    padding: 0px 10px;
-  }
-
-  .main-hero-img {
-    max-width: 100%;
-    max-height: 100%;
-  }
-
-  #sectionvideos {
-    grid-area: videos;
-    /* border: solid 1px black; */
-  }
-
-  .main-categories {
-    font-family: "Roboto", sans-serif;
-    margin: 10px 10px;
-    padding: 10px 10px;
-    font-size: 12px;
-    color: white;
-  }
-
-  #sectionfooter {
-    grid-area: footer;
-    background: linear-gradient(88deg, #ca6732 0%, #fc9c64 100%);
-    /* border: solid 1px black; */
-  }
-
-  .footer-img-logo-container {
-    display: block;
-    height: 30px;
-    width: 30px;
-    margin-right: 20px;
-    margin-left: 20px;
-  }
-
-  .footer-img-logo {
-    border: 2px solid #6484fc;
-    border-radius: 100%;
-    max-width: 100%;
-    max-height: 100%;
-  }
-
-  .footer-img-logo {
-    transition: 0.5s;
-  }
-
-  .footer-img-logo:hover {
-    transform: rotate(360deg);
-  }
-
-  .footer-area-list {
-    font-family: "Roboto", sans-serif;
-    font-size: 12px;
-    margin: 20px 0px 20px 0px;
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .footer-area-list {
-    transition: font-size 0.3s;
-  }
-
-  .footer-area-list:hover {
-    font-size: 13px;
-  }
-
-  .footer-links {
-    color: white;
-    text-decoration: none;
-
-    margin-right: 20px;
-  }
-
-  /* AQUI COMIENZAN ALGUNOS ESTILOS DE CONCEPT ART*/
-
-  #containerGallery {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 10px;
-    justify-content: center;
-    margin: 20px 0px;
-    padding: 0px 10px;
-  }
-
-  .main-container-cathegory-img-concept {
-    height: 100%;
-    width: 100%;
-  }
-  .main-category-img-concept {
-    height: 100%;
-    width: 100%;
-  }
-
-  .main-area-titles {
-    font-family: "Roboto", sans-serif;
-    font-weight: 600;
-    font-size: 25px;
-    margin: 20px;
-    color: rgb(255, 255, 255);
-  }
-
-  /* AQUI COMIENZAN UNOS ESTILOS DE QUIENES SOMOS*/
-
-  .containerArtQuienesSomos {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-    margin: 15px;
-    padding: 10px;
-  }
-
-  .main-categorie-img-container {
-    height: 100%;
-    width: 100%;
-  }
-  .main-categorie-img {
-    height: 100%;
-    width: 100%;
-  }
-
-  /*AQUI COMIENZAN UNOS ESTILOS DE CONTACTO*/
-  .form-area-titles {
-    font-family: "Roboto", sans-serif;
-    font-weight: 600;
-    font-size: 18px;
-    margin-left: 10px;
-    padding: 10px;
-    color: rgb(255, 255, 255);
-  }
-
-  .form-container {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    width: 250px;
-  }
-
-  .form-area-label {
-    font-family: "Roboto", sans-serif;
-    font-size: 14px;
-    font-weight: 300;
-    color: rgb(255, 255, 255);
-  }
-
-  /*AQUI COMIENZAN UNOS ESTILOS DE AYUDA*/
-
-  .main-categories-tittle-help {
-    font-family: "Roboto", sans-serif;
-    font-size: 17px;
-    margin: 0px 10px;
-    padding: 10px 10px;
-    color: white;
-  }
+}
+.father-body #sectionvideos .main-area-titles {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 25px;
+  margin: 20px;
+  color: rgb(255, 255, 255);
+}
+.father-body #sectionvideos #containerGallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  justify-content: center;
+  margin: 20px 0px;
+  padding: 0px 10px;
+}
+.father-body #sectionvideos #containerGallery .main-container-cathegory-img-concept {
+  height: 100%;
+  width: 100%;
+}
+.father-body #sectionvideos #containerGallery .main-container-cathegory-img-concept .main-category-img-concept {
+  height: 100%;
+  width: 100%;
+}
+.father-body #sectionvideos .quienes-somos-p {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  margin: 20px;
+  color: rgb(255, 255, 255);
+}
+.father-body #sectionvideos .containerArtQuienesSomos {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  margin: 15px;
+  padding: 10px;
+}
+.father-body #sectionvideos .containerArtQuienesSomos .main-categorie-img-container {
+  height: 100%;
+  width: 100%;
+}
+.father-body #sectionvideos .containerArtQuienesSomos .main-categorie-img-container .main-categorie-img {
+  height: 100%;
+  width: 100%;
+}
+.father-body #sectionvideos .form-area-titles {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 10px;
+  padding: 10px;
+  color: rgb(255, 255, 255);
+}
+.father-body #sectionvideos .form-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 250px;
+}
+.father-body #sectionvideos .form-container .form-area-label {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: rgb(255, 255, 255);
+}
+.father-body #sectionvideos .main-categories-tittle-help {
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
+  margin: 0px 10px;
+  padding: 10px 10px;
+  color: white;
+}
+.father-body #sectionfooter {
+  grid-area: footer;
+  background: linear-gradient(88deg, #ca6732 0%, #fc9c64 100%);
+}
+.father-body #sectionfooter .footer-area-list {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  margin: 20px 0px 20px 0px;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.father-body #sectionfooter .footer-area-list .footer-img-logo-container {
+  display: block;
+  height: 30px;
+  width: 30px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.father-body #sectionfooter .footer-area-list .footer-img-logo-container .footer-img-logo {
+  border: 2px solid #6484fc;
+  border-radius: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+.father-body #sectionfooter .footer-area-list .footer-img-logo-container .footer-img-logo {
+  transition: 0.5s;
+}
+.father-body #sectionfooter .footer-area-list .footer-img-logo-container .footer-img-logo:hover {
+  transform: rotate(360deg);
+}
+.father-body #sectionfooter .footer-area-list .footer-area-list {
+  transition: font-size 0.3s;
+}
+.father-body #sectionfooter .footer-area-list .footer-area-list:hover {
+  font-size: 13px;
+}
+.father-body #sectionfooter .footer-area-list .footer-links-list .footer-links {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
 }
 
 /*ESTILOS TABLET CHICA*/
 /*ESTILOS TABLET CHICA*/
 /*ESTILOS TABLET CHICA*/
-/*ESTILOS TABLET CHICA*/
-/*ESTILOS TABLET CHICA*/
-/*ESTILOS TABLET CHICA*/
-/*ESTILOS TABLET CHICA*/
-/*ESTILOS TABLET CHICA*/
-/*ESTILOS TABLET CHICA*/
-/*ESTILOS TABLET CHICA*/
-
 @media (min-width: 479.6px) and (max-width: 699.5px) {
-  .father-body {
-    background: linear-gradient(88deg, #3a3d40 0%, #181719 100%);
-    width: 100%;
-    height: 100vh;
-    display: grid;
-
-    grid-template-areas:
-      "naveg head"
-      "naveg hero"
-      "naveg videos"
-      "naveg footer";
-
-    grid-template-columns: 1fr 6fr;
-    grid-template-rows: 1fr 4fr 4fr 1fr;
-  }
-
-  /* GRID IDS*/
-
-  #sectionhead {
-    grid-area: head;
-    /* border: solid 1px black; */
-    background: linear-gradient(88deg, #ca6732 0%, #fc9c64 100%);
-  }
-
-  .header-title-style {
-    color: rgb(255, 255, 255);
-    font-family: "Roboto", sans-serif;
+  .father-body #sectionhead .header-title-style {
     font-size: 40px;
-    text-align: center;
-    animation-name: fade;
-    animation-duration: 1s;
   }
-
-  .header-slogan-style {
-    font-family: "Roboto", sans-serif;
-    font-style: italic;
+  .father-body #sectionhead .header-slogan-style {
     font-weight: 300;
     font-size: 20px;
-    text-align: center;
-    color: rgb(255, 255, 255);
-    animation-name: fade;
-    animation-duration: 1s;
   }
-
-  @keyframes fade {
-    0% {
-      opacity: 0;
-    }
-
-    100% {
-      opacity: 1;
-    }
-  }
-  #sectionmenu {
-    grid-area: naveg;
-    font-family: "Roboto", sans-serif;
-    background: linear-gradient(88deg, #ca6732 0%, #fc9c64 100%);
-    border-right: 1px solid #000000;
-    /* border: solid 1px black; */
-  }
-  .navcontainer {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .menu-img-logo-style-size {
-    display: block;
+  .father-body #sectionmenu .navcontainer .menu-img-logo-style-size {
     width: 40px;
     height: 40px;
-    margin: 20px auto;
   }
-  .menu-img-logo-style {
-    max-width: 100%;
-    max-height: 100%;
-    margin: 0 auto;
-    border: 2px solid #6484fc;
-    border-radius: 50%;
-  }
-
-  .menu-img-logo-style {
-    transition: 0.5s;
-  }
-
-  .menu-img-logo-style:hover {
-    transform: rotate(360deg);
-  }
-  .menu-list-style {
-    list-style-type: square;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: space-evenly;
-    animation-name: movimientomenu;
-    animation-duration: 1.2s;
-  }
-
-  @keyframes movimientomenu {
-    0% {
-      transform: translateY(110vh);
-    }
-    100% {
-      transform: translateY(0px);
-    }
-  }
-
-  aside > nav > ul > li {
-    margin: 10px;
-  }
-  .menu-list-link-style {
-    display: flex;
-    justify-content: center;
+  .father-body #sectionmenu .menu-list-style .menu-list-link-style {
     font-size: 0.7em;
-    color: white;
-    border: solid 2px rgb(255, 255, 255);
-    padding: 4px;
   }
-
-  .menu-list-link-style {
-    transition: font-size 0.3s;
-  }
-
-  .menu-list-link-style:hover {
+  .father-body #sectionmenu .menu-list-style .menu-list-link-style:hover {
     font-size: 0.75em;
   }
-
-  #sectionhero {
-    grid-area: hero;
-    /* border: solid 1px black; */
+  .father-body #sectionhero .main-area-titles {
+    font-size: 30px;
+  }
+  .father-body #sectionvideos {
+    /*ESTE CONTAINER DE ABAJO ES DE UNOS ESTILOS DE CONCEPT ART*/
+    /*ESTE CONTAINER DE ABAJO ES DE UNOS ESTILOS DE CONTACTO*/
+    /*ESTE QUE SIGUE ES DE UNOS ESTILOS DE AYUDA*/
+  }
+  .father-body #sectionvideos .main-categories {
+    font-size: 14px;
+  }
+  .father-body #sectionvideos #containerGallery {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .father-body #sectionvideos #containerGallery .main-container-cathegory-img-concept {
+    height: 100%;
     width: 100%;
-    padding: 0px 10px;
   }
-
-  .main-hero-img {
-    max-width: 100%;
-    max-height: 100%;
+  .father-body #sectionvideos #containerGallery .main-container-cathegory-img-concept .main-category-img-concept {
+    height: 100%;
+    width: 100%;
   }
-
-  #sectionvideos {
-    grid-area: videos;
-    /* border: solid 1px black; */
-  }
-
-  .main-categories {
-    font-family: "Roboto", sans-serif;
+  .father-body #sectionvideos .quienes-somos-p {
     font-size: 14px;
-    margin: 10px 10px;
-    padding: 10px 10px;
-    color: white;
   }
-
-  #sectionfooter {
-    grid-area: footer;
-    background: linear-gradient(88deg, #ca6732 0%, #fc9c64 100%);
-    /* border: solid 1px black; */
+  .father-body #sectionvideos .main-area-titles {
+    font-size: 30px;
   }
-
-  .footer-img-logo-container {
-    display: block;
-    height: 30px;
-    width: 30px;
-    margin-right: 20px;
-    margin-left: 20px;
+  .father-body #sectionvideos .form-area-titles {
+    font-size: 20px;
   }
-
-  .footer-img-logo {
-    border: 2px solid #6484fc;
-    border-radius: 100%;
-    max-width: 100%;
-    max-height: 100%;
+  .father-body #sectionvideos .form-container {
+    width: 300px;
   }
-
-  .footer-img-logo {
-    transition: 0.5s;
-  }
-
-  .footer-img-logo:hover {
-    transform: rotate(360deg);
-  }
-  .footer-area-list {
-    font-family: "Roboto", sans-serif;
-    font-size: 14px;
-    margin: 20px 0px 20px 0px;
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .footer-area-list {
-    transition: font-size 0.3s;
-  }
-
-  .footer-area-list:hover {
+  .father-body #sectionvideos .form-container .form-area-label {
     font-size: 16px;
   }
-
-  .footer-links {
-    color: white;
-    text-decoration: none;
-    margin-right: 20px;
-  }
-
-  /* AQUI COMIENZAN ALGUNOS ESTILOS DE CONCEPT ART*/
-
-  #containerGallery {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 10px;
-    justify-content: center;
-    margin: 20px 0px;
-    padding: 0px 10px;
-  }
-
-  .main-container-cathegory-img-concept {
-    height: 100%;
-    width: 100%;
-  }
-  .main-category-img-concept {
-    height: 100%;
-    width: 100%;
-  }
-
-  .main-area-titles {
-    font-family: "Roboto", sans-serif;
-    font-weight: 600;
-    font-size: 30px;
-    margin: 20px;
-    color: rgb(255, 255, 255);
-  }
-
-  /* AQUI COMIENZAN UNOS ESTILOS DE QUIENES SOMOS*/
-
-  .containerArtQuienesSomos {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-    margin: 15px;
-    padding: 15px;
-  }
-
-  .main-categorie-img-container {
-    height: 100%;
-    width: 100%;
-  }
-  .main-categorie-img {
-    height: 100%;
-    width: 100%;
-  }
-
-  /*AQUI COMIENZAN UNOS ESTILOS DE CONTACTO*/
-  .form-area-titles {
-    font-family: "Roboto", sans-serif;
-    font-weight: 600;
-    font-size: 20px;
-    margin-left: 10px;
-    padding: 10px;
-    color: rgb(255, 255, 255);
-  }
-
-  .form-container {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    width: 300px;
-  }
-
-  .form-area-label {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    color: rgb(255, 255, 255);
-  }
-
-  /*AQUI COMIENZAN UNOS ESTILOS DE AYUDA*/
-
-  .main-categories-tittle-help {
-    font-family: "Roboto", sans-serif;
-    font-size: 17px;
-    margin: 0px 10px;
-    padding: 10px 10px;
-    color: white;
-  }
-}
-
-/*TABLET GRANDE*/
-/*TABLET GRANDE*/
-/*TABLET GRANDE*/
-/*TABLET GRANDE*/
-/*TABLET GRANDE*/
-/*TABLET GRANDE*/
-/*TABLET GRANDE*/
-/*TABLET GRANDE*/
-/*TABLET GRANDE*/
-/*TABLET GRANDE*/
-/*TABLET GRANDE*/
-/*TABLET GRANDE*/
-/*TABLET GRANDE*/
-/*TABLET GRANDE*/
-/*TABLET GRANDE*/
-/*TABLET GRANDE*/
-
-@media (min-width: 699.6px) and (max-width: 1023.5px) {
-  .father-body {
-    background: linear-gradient(88deg, #3a3d40 0%, #181719 100%);
-    width: 100%;
-    height: 100vh;
-    display: grid;
-
-    grid-template-areas:
-      "naveg head"
-      "naveg hero"
-      "naveg videos"
-      "naveg footer";
-
-    grid-template-columns: 1fr 6fr;
-    grid-template-rows: 1fr 4fr 4fr 1fr;
-  }
-
-  /* GRID IDS*/
-
-  #sectionhead {
-    grid-area: head;
-    /* border: solid 1px black; */
-    background: linear-gradient(88deg, #ca6732 0%, #fc9c64 100%);
-  }
-
-  .header-title-style {
-    color: rgb(255, 255, 255);
-    font-family: "Roboto", sans-serif;
-    font-size: 40px;
-    text-align: center;
-    animation-name: fade;
-    animation-duration: 1s;
-  }
-
-  .header-slogan-style {
-    font-family: "Roboto", sans-serif;
-    font-style: italic;
-    font-weight: 300;
-    font-size: 20px;
-    text-align: center;
-    color: rgb(255, 255, 255);
-    animation-name: fade;
-    animation-duration: 1s;
-  }
-
-  @keyframes fade {
-    0% {
-      opacity: 0;
-    }
-
-    100% {
-      opacity: 1;
-    }
-  }
-
-  #sectionmenu {
-    grid-area: naveg;
-    font-family: "Roboto", sans-serif;
-    background: linear-gradient(88deg, #ca6732 0%, #fc9c64 100%);
-    border-right: 1px solid #000000;
-    /* border: solid 1px black; */
-  }
-  .navcontainer {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .menu-img-logo-style-size {
-    display: block;
-    width: 40px;
-    height: 40px;
-    margin: 20px auto;
-  }
-  .menu-img-logo-style {
-    max-width: 100%;
-    max-height: 100%;
-    margin: 0 auto;
-    border: 2px solid #6484fc;
-    border-radius: 50%;
-  }
-
-  .menu-img-logo-style {
-    transition: 0.5s;
-  }
-
-  .menu-img-logo-style:hover {
-    transform: rotate(360deg);
-  }
-  .menu-list-style {
-    list-style-type: square;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: space-evenly;
-    animation-name: movimientomenu;
-    animation-duration: 1.2s;
-  }
-
-  @keyframes movimientomenu {
-    0% {
-      transform: translateY(110vh);
-    }
-    100% {
-      transform: translateY(0px);
-    }
-  }
-  aside > nav > ul > li {
-    margin: 10px;
-  }
-  .menu-list-link-style {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    color: white;
-    border: solid 2px rgb(255, 255, 255);
-    padding: 6px;
-  }
-
-  .menu-list-link-style {
-    transition: font-size 0.3s;
-  }
-
-  .menu-list-link-style:hover {
+  .father-body #sectionvideos .main-categories-tittle-help {
     font-size: 18px;
   }
-
-  #sectionhero {
-    grid-area: hero;
-    /* border: solid 1px black; */
-    width: 100%;
-    padding: 0px 10px;
+  .father-body #sectionfooter .footer-area-list {
+    font-size: 14px;
   }
-
-  .main-hero-img {
-    max-width: 100%;
-    max-height: 100%;
-  }
-
-  #sectionvideos {
-    grid-area: videos;
-    /* border: solid 1px black; */
-  }
-
-  .main-categories {
-    font-family: "Roboto", sans-serif;
-    font-size: 15px;
-    margin: 10px 10px;
-    padding: 10px 10px;
-    color: white;
-  }
-
-  #sectionfooter {
-    grid-area: footer;
-    background: linear-gradient(88deg, #ca6732 0%, #fc9c64 100%);
-    /* border: solid 1px black; */
-  }
-
-  .footer-img-logo-container {
-    display: block;
-    height: 30px;
-    width: 30px;
-    margin-right: 20px;
-  }
-
-  .footer-img-logo {
-    border: 2px solid #6484fc;
-    border-radius: 100%;
-    max-width: 100%;
-    max-height: 100%;
-  }
-
-  .footer-img-logo {
-    transition: 0.5s;
-  }
-
-  .footer-img-logo:hover {
-    transform: rotate(360deg);
-  }
-
-  .footer-area-list {
-    font-family: "Roboto", sans-serif;
-    font-size: 15px;
-    margin: 20px 0px 20px 0px;
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .footer-area-list {
+  .father-body #sectionfooter .footer-area-list {
     transition: font-size 0.3s;
   }
-
-  .footer-area-list:hover {
-    font-size: 17px;
-  }
-  .footer-links {
-    color: white;
-    text-decoration: none;
-    margin-right: 20px;
-  }
-
-  /* AQUI COMIENZAN ALGUNOS ESTILOS DE CONCEPT ART*/
-
-  #containerGallery {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 10px;
-    justify-content: center;
-    margin: 20px 0px;
-    padding: 0px 10px;
-  }
-
-  .main-container-cathegory-img-concept {
-    height: 100%;
-    width: 100%;
-  }
-  .main-category-img-concept {
-    height: 100%;
-    width: 100%;
-  }
-
-  .main-area-titles {
-    font-family: "Roboto", sans-serif;
-    font-weight: 600;
-    font-size: 30px;
-    margin: 20px;
-    color: rgb(255, 255, 255);
-  }
-
-  /* AQUI COMIENZAN UNOS ESTILOS DE QUIENES SOMOS*/
-
-  .containerArtQuienesSomos {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-    margin: 20px;
-    padding: 20px;
-  }
-
-  .main-categorie-img-container {
-    height: 100%;
-    width: 100%;
-  }
-  .main-categorie-img {
-    height: 100%;
-    width: 100%;
-  }
-
-  /*AQUI COMIENZAN UNOS ESTILOS DE CONTACTO*/
-  .form-area-titles {
-    font-family: "Roboto", sans-serif;
-    font-weight: 600;
-    font-size: 20px;
-    margin-left: 10px;
-    padding: 10px;
-    color: rgb(255, 255, 255);
-  }
-
-  .form-container {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    width: 300px;
-  }
-
-  .form-area-label {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    color: rgb(255, 255, 255);
-  }
-
-  /*AQUI COMIENZAN UNOS ESTILOS DE AYUDA*/
-
-  .main-categories-tittle-help {
-    font-family: "Roboto", sans-serif;
-    margin: 0px 10px;
-    padding: 10px 10px;
-    color: white;
+  .father-body #sectionfooter .footer-area-list:hover {
+    font-size: 16px;
   }
 }
-
+/*TABLET GRANDE*/
+/*TABLET GRANDE*/
+/*TABLET GRANDE*/
+@media (min-width: 699.6px) and (max-width: 1023.5px) {
+  .father-body #sectionhead .header-title-style {
+    font-size: 40px;
+  }
+  .father-body #sectionhead .header-slogan-style {
+    font-weight: 400;
+    font-size: 20px;
+  }
+  .father-body #sectionmenu .navcontainer .menu-img-logo-style-size {
+    width: 40px;
+    height: 40px;
+  }
+  .father-body #sectionmenu .navcontainer .menu-list-style .menu-list-link-style {
+    font-size: 1em;
+    padding: 6px;
+  }
+  .father-body #sectionmenu .navcontainer .menu-list-style .menu-list-link-style:hover {
+    font-size: 18px;
+  }
+  .father-body #sectionhero .main-area-titles {
+    font-size: 30px;
+  }
+  .father-body #sectionvideos {
+    /*ESTE CONTAINER DE ABAJO ES DE UNOS ESTILOS DE CONCEPT ART*/
+    /*ESTE CONTAINER DE ABAJO ES DE UNOS ESTILOS DE CONTACTO*/
+    /*ESTE CONTAINER  DE ABAJO ES DE UNOS ESTILOS DE QUIENES SOMOS*/
+    /*ESTE QUE SIGUE ES DE UNOS ESTILOS DE AYUDA*/
+  }
+  .father-body #sectionvideos .main-categories {
+    font-size: 15px;
+  }
+  .father-body #sectionvideos #containerGallery {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .father-body #sectionvideos #containerGallery .main-container-cathegory-img-concept {
+    height: 100%;
+    width: 100%;
+  }
+  .father-body #sectionvideos #containerGallery .main-container-cathegory-img-concept .main-category-img-concept {
+    height: 100%;
+    width: 100%;
+  }
+  .father-body #sectionvideos .quienes-somos-p {
+    font-size: 15px;
+  }
+  .father-body #sectionvideos .main-area-titles {
+    font-size: 30px;
+  }
+  .father-body #sectionvideos .form-area-titles {
+    font-size: 20px;
+  }
+  .father-body #sectionvideos .form-container {
+    width: 300px;
+  }
+  .father-body #sectionvideos .form-container .form-area-label {
+    font-size: 16px;
+  }
+  .father-body #sectionvideos .containerArtQuienesSomos {
+    grid-template-columns: 1fr 1fr;
+    margin: 20px;
+    padding: 20px;
+  }
+  .father-body #sectionvideos .main-categories-tittle-help {
+    font-size: 20px;
+  }
+  .father-body #sectionfooter .footer-area-list {
+    font-size: 15px;
+  }
+  .father-body #sectionfooter .footer-area-list .footer-img-logo-container {
+    margin-left: 0px;
+  }
+  .father-body #sectionfooter .footer-area-list {
+    transition: font-size 0.3s;
+  }
+  .father-body #sectionfooter .footer-area-list:hover {
+    font-size: 17px;
+  }
+}
 /*ESTILOS DESKTOP*/
 /*ESTILOS DESKTOP*/
 /*ESTILOS DESKTOP*/
-/*ESTILOS DESKTOP*/
-/*ESTILOS DESKTOP*/
-/*ESTILOS DESKTOP*/
-/*ESTILOS DESKTOP*/
-/*ESTILOS DESKTOP*/
-/*ESTILOS DESKTOP*/
-/*ESTILOS DESKTOP*/
-/*ESTILOS DESKTOP*/
-/*ESTILOS DESKTOP*/
-/*ESTILOS DESKTOP*/
-/*ESTILOS DESKTOP*/
-/*ESTILOS DESKTOP*/
-/*ESTILOS DESKTOP*/
-/*ESTILOS DESKTOP*/
-/*ESTILOS DESKTOP*/
-/*ESTILOS DESKTOP*/
-/*ESTILOS DESKTOP*/
-
 @media (min-width: 1023.6px) {
   .father-body {
     background: linear-gradient(88deg, #28496a 0%, #6484fc 100%);
-    width: 100%;
-    height: 100vh;
-    display: grid;
-
-    grid-template-areas:
-      "naveg head"
-      "naveg hero"
-      "naveg videos"
-      "naveg footer";
-
-    grid-template-columns: 1fr 6fr;
-    grid-template-rows: 1fr 4fr 4fr 1fr;
   }
-
-  /* GRID IDS*/
-
-  #sectionhead {
-    grid-area: head;
-    /* border: solid 1px black; */
-    background: linear-gradient(88deg, #ca6732 0%, #fc9c64 100%);
-  }
-
-  .header-title-style {
-    color: rgb(255, 255, 255);
-    font-family: "Roboto", sans-serif;
+  .father-body #sectionhead .header-title-style {
     font-size: 50px;
-    text-align: center;
-    animation-name: fade;
-    animation-duration: 1s;
   }
-
-  .header-slogan-style {
-    font-family: "Roboto", sans-serif;
-    font-style: italic;
+  .father-body #sectionhead .header-slogan-style {
     font-weight: 600;
-    text-align: center;
-    color: rgb(255, 255, 255);
-    animation-name: fade;
-    animation-duration: 1s;
+    font-size: 24px;
   }
-
-  @keyframes fade {
-    0% {
-      opacity: 0;
-    }
-
-    100% {
-      opacity: 1;
-    }
-  }
-
-  #sectionmenu {
-    grid-area: naveg;
-    font-family: "Roboto", sans-serif;
-    background: linear-gradient(88deg, #ca6732 0%, #fc9c64 100%);
-    border-right: 1px solid #000000;
-    /* border: solid 1px black; */
-  }
-  .navcontainer {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .menu-img-logo-style-size {
-    display: block;
+  .father-body #sectionmenu .navcontainer .menu-img-logo-style-size {
     width: 50px;
     height: 50px;
-    margin: 20px auto;
   }
-  .menu-img-logo-style {
-    max-width: 100%;
-    max-height: 100%;
-    margin: 0 auto;
-    border: 2px solid #6484fc;
-    border-radius: 50%;
+  .father-body #sectionmenu .navcontainer .menu-list-style .menu-list-link-style {
+    padding: 0px;
+    font-size: 16px;
   }
-  .menu-img-logo-style {
-    transition: 0.5s;
-  }
-
-  .menu-img-logo-style:hover {
-    transform: rotate(360deg);
-  }
-
-  .menu-list-style {
-    list-style-type: square;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: space-evenly;
-    animation-name: movimientomenu;
-    animation-duration: 1.2s;
-  }
-
-  @keyframes movimientomenu {
-    0% {
-      transform: translateY(110vh);
-    }
-    100% {
-      transform: translateY(0px);
-    }
-  }
-
-  aside > nav > ul > li {
-    margin: 10px;
-    border: solid 2px rgb(255, 255, 255);
-  }
-
-  .menu-list-link-style {
-    text-align: center;
-    color: white;
-  }
-  .menu-list-link-style {
+  .father-body #sectionmenu .navcontainer .menu-list-style .menu-list-link-style {
     transition: font-size 0.3s;
   }
-
-  .menu-list-link-style:hover {
+  .father-body #sectionmenu .navcontainer .menu-list-style .menu-list-link-style:hover {
     font-size: 20px;
   }
-
-  #sectionhero {
-    grid-area: hero;
-    /* border: solid 1px black; */
-    width: 100%;
-    padding: 0px 10px;
-  }
-
-  .main-hero-img {
-    max-width: 100%;
-    max-height: 100%;
-  }
-
-  #sectionvideos {
-    grid-area: videos;
-    /* border: solid 1px black; */
-  }
-
-  .main-categories {
-    font-family: "Roboto", sans-serif;
-    margin: 10px 10px;
-    padding: 10px 10px;
-    color: white;
-  }
-
-  #sectionfooter {
-    grid-area: footer;
-    background: linear-gradient(88deg, #ca6732 0%, #fc9c64 100%);
-    /* border: solid 1px black; */
-  }
-
-  .footer-img-logo-container {
-    display: block;
-    height: 30px;
-    width: 30px;
-    margin-right: 20px;
-  }
-
-  .footer-img-logo {
-    border: 2px solid #6484fc;
-    border-radius: 100%;
-    max-width: 100%;
-    max-height: 100%;
-  }
-  .footer-img-logo {
-    transition: 0.5s;
-  }
-
-  .footer-img-logo:hover {
-    transform: rotate(360deg);
-  }
-  .footer-area-list {
-    font-family: "Roboto", sans-serif;
-    margin: 20px 0px 20px 0px;
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .footer-area-list {
-    transition: font-size 0.3s;
-  }
-
-  .footer-area-list:hover {
-    font-size: 20px;
-  }
-
-  .footer-links {
-    color: white;
-    text-decoration: none;
-    margin-right: 20px;
-  }
-
-  /* AQUI COMIENZAN ALGUNOS ESTILOS DE CONCEPT ART*/
-
-  #containerGallery {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 10px;
-    justify-content: center;
-    margin: 20px 0px;
-    padding: 0px 10px;
-  }
-
-  .main-container-cathegory-img-concept {
-    height: 100%;
-    width: 100%;
-  }
-  .main-category-img-concept {
-    height: 100%;
-    width: 100%;
-  }
-
-  .main-area-titles {
-    font-family: "Roboto", sans-serif;
-    font-weight: 600;
+  .father-body #sectionhero .main-area-titles {
     font-size: 40px;
-    margin: 20px;
-    color: rgb(255, 255, 255);
   }
-
-  /* AQUI COMIENZAN UNOS ESTILOS DE QUIENES SOMOS*/
-
-  .containerArtQuienesSomos {
-    display: grid;
+  .father-body #sectionvideos {
+    /*ESTE CONTAINER DE ABAJO ES DE UNOS ESTILOS DE CONCEPT ART*/
+    /*ESTE CONTAINER  DE ABAJO ES DE UNOS ESTILOS DE QUIENES SOMOS*/
+    /*ESTE CONTAINER DE ABAJO ES DE UNOS ESTILOS DE CONTACTO*/
+    /*ESTE QUE SIGUE ES DE UNOS ESTILOS DE AYUDA*/
+  }
+  .father-body #sectionvideos .main-categories {
+    font-size: 16px;
+  }
+  .father-body #sectionvideos #containerGallery {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .father-body #sectionvideos #containerGallery .main-container-cathegory-img-concept {
+    height: 100%;
+    width: 100%;
+  }
+  .father-body #sectionvideos #containerGallery .main-container-cathegory-img-concept .main-category-img-concept {
+    height: 100%;
+    width: 100%;
+  }
+  .father-body #sectionvideos .quienes-somos-p {
+    font-size: 16px;
+  }
+  .father-body #sectionvideos .containerArtQuienesSomos {
     grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
     margin: 30px;
     padding: 20px;
   }
-
-  .main-categorie-img-container {
-    height: 100%;
-    width: 100%;
+  .father-body #sectionvideos .main-area-titles {
+    font-size: 40px;
   }
-  .main-categorie-img {
-    height: 100%;
-    width: 100%;
-  }
-
-  /*AQUI COMIENZAN UNOS ESTILOS DE CONTACTO*/
-  .form-area-titles {
-    font-family: "Roboto", sans-serif;
-    font-weight: 600;
+  .father-body #sectionvideos .form-area-titles {
     font-size: 25px;
-    margin-left: 10px;
-    padding: 10px;
-    color: rgb(255, 255, 255);
   }
-
-  .form-container {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
+  .father-body #sectionvideos .form-container {
     width: 300px;
   }
-
-  .form-area-label {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    color: rgb(255, 255, 255);
+  .father-body #sectionvideos .form-container .form-area-label {
+    font-size: 16px;
   }
-
-  /*AQUI COMIENZAN UNOS ESTILOS DE AYUDA*/
-
-  .main-categories-tittle-help {
-    font-family: "Roboto", sans-serif;
-    margin: 0px 10px;
-    padding: 10px 10px;
-    color: white;
+  .father-body #sectionvideos .main-categories-tittle-help {
+    font-size: 20px;
+  }
+  .father-body #sectionfooter .footer-area-list {
+    font-size: 17px;
+  }
+  .father-body #sectionfooter .footer-area-list .footer-img-logo-container {
+    margin-left: 0px;
+  }
+  .father-body #sectionfooter .footer-area-list {
+    transition: font-size 0.3s;
+  }
+  .father-body #sectionfooter .footer-area-list:hover {
+    font-size: 20px;
   }
 }
+
+/*# sourceMappingURL=style.css.map */

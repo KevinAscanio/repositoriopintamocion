@@ -1,0 +1,660 @@
+/*FUENTE Y SELECTOR GLOBAL*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fuentes/Roboto/Roboto-Regular.ttf");
+}
+
+/*VARIABLES*/
+$gris: #3a3d40;
+$negro: #181719;
+$naranja: #ca6732;
+$naranjita: #fc9c64;
+$azul: #6484fc;
+$azulito: #28496a;
+
+/*VERSION MOBILE*/
+.father-body {
+  background: linear-gradient(88deg, $gris 0%, $negro 100%);
+  width: 100%;
+  height: 100vh;
+  display: grid;
+
+  grid-template-areas:
+    "naveg head"
+    "naveg hero"
+    "naveg videos"
+    "naveg footer";
+
+  grid-template-columns: 1fr 6fr;
+  grid-template-rows: 1fr 4fr 4fr 1fr;
+
+  #sectionhead {
+    grid-area: head;
+
+    background: linear-gradient(88deg, $naranja 0%, $naranjita 100%);
+
+    .header-title-style {
+      color: rgb(255, 255, 255);
+      font-family: "Roboto", sans-serif;
+      font-size: 30px;
+      text-align: center;
+      animation-name: fade;
+      animation-duration: 1s;
+    }
+
+    .header-slogan-style {
+      font-family: "Roboto", sans-serif;
+      font-style: italic;
+      font-weight: 200;
+      font-size: 15px;
+      text-align: center;
+      color: rgb(255, 255, 255);
+      animation-name: fade;
+      animation-duration: 1s;
+    }
+
+    @keyframes fade {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+
+  #sectionmenu {
+    grid-area: naveg;
+    font-family: "Roboto", sans-serif;
+    background: linear-gradient(88deg, $naranja 0%, $naranjita 100%);
+    border-right: 1px solid #000000;
+  }
+  .navcontainer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    .menu-img-logo-style-size {
+      display: block;
+      width: 30px;
+      height: 30px;
+      margin: 20px auto;
+
+      .menu-img-logo-style {
+        max-width: 100%;
+        max-height: 100%;
+        margin: 0 auto;
+        border: 2px solid $azul;
+        border-radius: 50%;
+      }
+
+      .menu-img-logo-style {
+        transition: 0.5s;
+      }
+
+      .menu-img-logo-style:hover {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  .menu-list-style {
+    list-style-type: square;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+    animation-name: movimientomenu;
+    animation-duration: 1.2s;
+
+    .menu-list-link-style {
+      display: flex;
+      justify-content: center;
+      font-size: 0.6em;
+      color: white;
+      border: solid 2px rgb(255, 255, 255);
+      padding: 4px;
+    }
+
+    .menu-list-link-style {
+      transition: font-size 0.3s;
+    }
+
+    .menu-list-link-style:hover {
+      font-size: 0.67em;
+    }
+  }
+
+  @keyframes movimientomenu {
+    0% {
+      transform: translateY(110vh);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  .menu-list-link-style {
+    transition: font-size 0.3s;
+  }
+
+  .menu-list-link-style:hover {
+    font-size: 0.75em;
+  }
+
+  /* Tengo una duda sobre esta categoria que esta mas abajo como puedo reescribirla! pero haciendo nesting recuerda preguntar*/
+
+  aside > nav > ul > li {
+    margin: 10px;
+  }
+
+  #sectionhero {
+    grid-area: hero;
+
+    width: 100%;
+    padding: 0px 10px;
+
+    .main-hero-img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+    .main-area-titles {
+      font-family: "Roboto", sans-serif;
+      font-weight: 600;
+      font-size: 25px;
+      margin: 20px;
+      color: rgb(255, 255, 255);
+    }
+  }
+
+  #sectionvideos {
+    grid-area: videos;
+
+    .main-categories {
+      font-family: "Roboto", sans-serif;
+      margin: 10px 10px;
+      padding: 10px 10px;
+      font-size: 12px;
+      color: white;
+
+      .categorie-title:hover {
+        animation-name: titulo;
+        animation-duration: 0.3s;
+        cursor: pointer;
+      }
+      @keyframes titulo {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-2px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+    }
+
+    .main-area-titles {
+      font-family: "Roboto", sans-serif;
+      font-weight: 600;
+      font-size: 25px;
+      margin: 20px;
+      color: rgb(255, 255, 255);
+    }
+    /*ESTE CONTAINER ES DE UNOS ESTILOS DE CONCEPT ART*/
+    #containerGallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 10px;
+      justify-content: center;
+      margin: 20px 0px;
+      padding: 0px 10px;
+
+      .main-container-cathegory-img-concept {
+        height: 100%;
+        width: 100%;
+        .main-category-img-concept {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+
+    .quienes-somos-p {
+      font-family: "Roboto", sans-serif;
+      font-size: 12px;
+      margin: 20px;
+      color: rgb(255, 255, 255);
+    }
+
+    /*ESTE CONTAINER ES DE UNOS ESTILOS DE QUIENES SOMOS*/
+    .containerArtQuienesSomos {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 20px;
+      margin: 15px;
+      padding: 10px;
+
+      .main-categorie-img-container {
+        height: 100%;
+        width: 100%;
+        .main-categorie-img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+    /*ESTE CONTAINER DE ABAJO ES DE UNOS ESTILOS DE CONTACTO*/
+    .form-area-titles {
+      font-family: "Roboto", sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+      margin-left: 10px;
+      padding: 10px;
+      color: rgb(255, 255, 255);
+    }
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      width: 250px;
+      .form-area-label {
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        color: rgb(255, 255, 255);
+      }
+    }
+    /*ESTE QUE SIGUE ES DE UNOS ESTILOS DE AYUDA*/
+    .main-categories-tittle-help {
+      font-family: "Roboto", sans-serif;
+      font-size: 17px;
+      margin: 0px 10px;
+      padding: 10px 10px;
+      color: white;
+    }
+  }
+
+  #sectionfooter {
+    grid-area: footer;
+    background: linear-gradient(88deg, $naranja 0%, $naranjita 100%);
+
+    .footer-area-list {
+      font-family: "Roboto", sans-serif;
+      font-size: 12px;
+      margin: 20px 0px 20px 0px;
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .footer-img-logo-container {
+        display: block;
+        height: 30px;
+        width: 30px;
+        margin-right: 20px;
+        margin-left: 20px;
+
+        .footer-img-logo {
+          border: 2px solid $azul;
+          border-radius: 100%;
+          max-width: 100%;
+          max-height: 100%;
+        }
+
+        .footer-img-logo {
+          transition: 0.5s;
+        }
+
+        .footer-img-logo:hover {
+          transform: rotate(360deg);
+        }
+      }
+
+      .footer-area-list {
+        transition: font-size 0.3s;
+      }
+
+      .footer-area-list:hover {
+        font-size: 13px;
+      }
+
+      .footer-links-list {
+        .footer-links {
+          color: white;
+          text-decoration: none;
+
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}
+
+/*ESTILOS TABLET CHICA*/
+/*ESTILOS TABLET CHICA*/
+/*ESTILOS TABLET CHICA*/
+
+@media (min-width: 479.6px) and (max-width: 699.5px) {
+  .father-body {
+    #sectionhead {
+      .header-title-style {
+        font-size: 40px;
+      }
+
+      .header-slogan-style {
+        font-weight: 300;
+        font-size: 20px;
+      }
+    }
+
+    #sectionmenu {
+      .navcontainer {
+        .menu-img-logo-style-size {
+          width: 40px;
+          height: 40px;
+        }
+      }
+
+      .menu-list-style {
+        .menu-list-link-style {
+          font-size: 0.7em;
+        }
+        .menu-list-link-style:hover {
+          font-size: 0.75em;
+        }
+      }
+    }
+    #sectionhero {
+      .main-area-titles {
+        font-size: 30px;
+      }
+    }
+
+    #sectionvideos {
+      .main-categories {
+        font-size: 14px;
+      }
+      /*ESTE CONTAINER DE ABAJO ES DE UNOS ESTILOS DE CONCEPT ART*/
+      #containerGallery {
+        grid-template-columns: 1fr 1fr 1fr;
+
+        .main-container-cathegory-img-concept {
+          height: 100%;
+          width: 100%;
+          .main-category-img-concept {
+            height: 100%;
+            width: 100%;
+          }
+        }
+      }
+
+      .quienes-somos-p {
+        font-size: 14px;
+      }
+
+      .main-area-titles {
+        font-size: 30px;
+      }
+      /*ESTE CONTAINER DE ABAJO ES DE UNOS ESTILOS DE CONTACTO*/
+      .form-area-titles {
+        font-size: 20px;
+      }
+      .form-container {
+        width: 300px;
+        .form-area-label {
+          font-size: 16px;
+        }
+      }
+      /*ESTE QUE SIGUE ES DE UNOS ESTILOS DE AYUDA*/
+      .main-categories-tittle-help {
+        font-size: 18px;
+      }
+    }
+
+    #sectionfooter {
+      .footer-area-list {
+        font-size: 14px;
+      }
+
+      .footer-area-list {
+        transition: font-size 0.3s;
+      }
+
+      .footer-area-list:hover {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+/*TABLET GRANDE*/
+/*TABLET GRANDE*/
+/*TABLET GRANDE*/
+
+@media (min-width: 699.6px) and (max-width: 1023.5px) {
+  .father-body {
+    #sectionhead {
+      .header-title-style {
+        font-size: 40px;
+      }
+
+      .header-slogan-style {
+        font-weight: 400;
+        font-size: 20px;
+      }
+    }
+
+    #sectionmenu {
+      .navcontainer {
+        .menu-img-logo-style-size {
+          width: 40px;
+          height: 40px;
+        }
+        .menu-list-style {
+          .menu-list-link-style {
+            font-size: 1em;
+            padding: 6px;
+          }
+
+          .menu-list-link-style:hover {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+
+    #sectionhero {
+      .main-area-titles {
+        font-size: 30px;
+      }
+    }
+
+    #sectionvideos {
+      .main-categories {
+        font-size: 15px;
+      }
+      /*ESTE CONTAINER DE ABAJO ES DE UNOS ESTILOS DE CONCEPT ART*/
+      #containerGallery {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        .main-container-cathegory-img-concept {
+          height: 100%;
+          width: 100%;
+          .main-category-img-concept {
+            height: 100%;
+            width: 100%;
+          }
+        }
+      }
+
+      .quienes-somos-p {
+        font-size: 15px;
+      }
+
+      .main-area-titles {
+        font-size: 30px;
+      }
+      /*ESTE CONTAINER DE ABAJO ES DE UNOS ESTILOS DE CONTACTO*/
+      .form-area-titles {
+        font-size: 20px;
+      }
+      .form-container {
+        width: 300px;
+        .form-area-label {
+          font-size: 16px;
+        }
+      }
+
+      /*ESTE CONTAINER  DE ABAJO ES DE UNOS ESTILOS DE QUIENES SOMOS*/
+      .containerArtQuienesSomos {
+        grid-template-columns: 1fr 1fr;
+        margin: 20px;
+        padding: 20px;
+      }
+
+      /*ESTE QUE SIGUE ES DE UNOS ESTILOS DE AYUDA*/
+      .main-categories-tittle-help {
+        font-size: 20px;
+      }
+    }
+
+    #sectionfooter {
+      .footer-area-list {
+        font-size: 15px;
+
+        .footer-img-logo-container {
+          margin-left: 0px;
+        }
+      }
+      .footer-area-list {
+        transition: font-size 0.3s;
+      }
+
+      .footer-area-list:hover {
+        font-size: 17px;
+      }
+    }
+  }
+}
+
+/*ESTILOS DESKTOP*/
+/*ESTILOS DESKTOP*/
+/*ESTILOS DESKTOP*/
+
+@media (min-width: 1023.6px) {
+  .father-body {
+    background: linear-gradient(88deg, $azulito 0%, $azul 100%);
+
+    #sectionhead {
+      .header-title-style {
+        font-size: 50px;
+      }
+
+      .header-slogan-style {
+        font-weight: 600;
+        font-size: 24px;
+      }
+    }
+
+    #sectionmenu {
+      .navcontainer {
+        .menu-img-logo-style-size {
+          width: 50px;
+          height: 50px;
+        }
+        .menu-list-style {
+          .menu-list-link-style {
+            padding: 0px;
+            font-size: 16px;
+          }
+
+          .menu-list-link-style {
+            transition: font-size 0.3s;
+          }
+
+          .menu-list-link-style:hover {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+
+    #sectionhero {
+      .main-area-titles {
+        font-size: 40px;
+      }
+    }
+
+    #sectionvideos {
+      .main-categories {
+        font-size: 16px;
+      }
+      /*ESTE CONTAINER DE ABAJO ES DE UNOS ESTILOS DE CONCEPT ART*/
+      #containerGallery {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        .main-container-cathegory-img-concept {
+          height: 100%;
+          width: 100%;
+          .main-category-img-concept {
+            height: 100%;
+            width: 100%;
+          }
+        }
+      }
+      .quienes-somos-p {
+        font-size: 16px;
+      }
+      /*ESTE CONTAINER  DE ABAJO ES DE UNOS ESTILOS DE QUIENES SOMOS*/
+      .containerArtQuienesSomos {
+        grid-template-columns: 1fr 1fr;
+        margin: 30px;
+        padding: 20px;
+      }
+
+      .main-area-titles {
+        font-size: 40px;
+      }
+      /*ESTE CONTAINER DE ABAJO ES DE UNOS ESTILOS DE CONTACTO*/
+      .form-area-titles {
+        font-size: 25px;
+      }
+      .form-container {
+        width: 300px;
+        .form-area-label {
+          font-size: 16px;
+        }
+      }
+      /*ESTE QUE SIGUE ES DE UNOS ESTILOS DE AYUDA*/
+      .main-categories-tittle-help {
+        font-size: 20px;
+      }
+    }
+
+    #sectionfooter {
+      .footer-area-list {
+        font-size: 17px;
+
+        .footer-img-logo-container {
+          margin-left: 0px;
+        }
+      }
+      .footer-area-list {
+        transition: font-size 0.3s;
+      }
+
+      .footer-area-list:hover {
+        font-size: 20px;
+      }
+    }
+  }
+}
