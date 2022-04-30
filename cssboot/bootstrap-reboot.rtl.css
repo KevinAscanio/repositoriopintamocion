@@ -48,6 +48,7 @@
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
   --bs-body-bg-rgb: 255, 255, 255;
+<<<<<<< HEAD
   --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -58,6 +59,11 @@
     rgba(255, 255, 255, 0.15),
     rgba(255, 255, 255, 0)
   );
+=======
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+>>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
   --bs-body-font-family: var(--bs-font-sans-serif);
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
@@ -83,6 +89,10 @@ body {
   font-family: var(--bs-body-font-family);
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
+<<<<<<< HEAD
+=======
+  line-height: var(--bs-body-line-height);
+>>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
   color: var(--bs-body-color);
   text-align: var(--bs-body-text-align);
   background-color: var(--bs-body-bg);
@@ -102,6 +112,16 @@ hr:not([size]) {
   height: 1px;
 }
 
+<<<<<<< HEAD
+=======
+h6, h5, h4, h3, h2, h1 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+>>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
 h1 {
   font-size: calc(1.375rem + 1.5vw);
 }
@@ -236,8 +256,12 @@ a:hover {
   color: #0a58ca;
 }
 
+<<<<<<< HEAD
 a:not([href]):not([class]),
 a:not([href]):not([class]):hover {
+=======
+a:not([href]):not([class]), a:not([href]):not([class]):hover {
+>>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
   color: inherit;
   text-decoration: none;
 }
@@ -248,7 +272,11 @@ kbd,
 samp {
   font-family: var(--bs-font-monospace);
   font-size: 1em;
+<<<<<<< HEAD
   direction: ltr;
+=======
+  direction: ltr ;
+>>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
   unicode-bidi: bidi-override;
 }
 
@@ -352,7 +380,11 @@ select {
   text-transform: none;
 }
 
+<<<<<<< HEAD
 [role="button"] {
+=======
+[role=button] {
+>>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
   cursor: pointer;
 }
 
@@ -368,6 +400,7 @@ select:disabled {
 }
 
 button,
+<<<<<<< HEAD
 [type="button"],
 [type="reset"],
 [type="submit"] {
@@ -377,6 +410,17 @@ button:not(:disabled),
 [type="button"]:not(:disabled),
 [type="reset"]:not(:disabled),
 [type="submit"]:not(:disabled) {
+=======
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+button:not(:disabled),
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled) {
+>>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
   cursor: pointer;
 }
 
@@ -427,7 +471,11 @@ legend + * {
   height: auto;
 }
 
+<<<<<<< HEAD
 [type="search"] {
+=======
+[type=search] {
+>>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
   outline-offset: -2px;
   -webkit-appearance: textfield;
 }
@@ -479,4 +527,8 @@ progress {
 [hidden] {
   display: none !important;
 }
+<<<<<<< HEAD
 /*# sourceMappingURL=bootstrap-reboot.rtl.css.map */
+=======
+/*# sourceMappingURL=bootstrap-reboot.rtl.css.map */
+>>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac

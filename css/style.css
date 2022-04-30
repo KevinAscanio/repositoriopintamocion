@@ -1,14 +1,18 @@
 /*FUENTE Y SELECTOR GLOBAL*/
+<<<<<<< HEAD
 @font-face {
   font-family: "Roboto";
   src: url("../fuentes/Roboto/Roboto-Regular.ttf");
 }
+=======
+>>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+<<<<<<< HEAD
 /*VARIABLES*/
 /*MIXING*/
 /*EACH Y MAPA*/
@@ -24,6 +28,13 @@
   background-color: #55c0dd;
 }
 
+=======
+@font-face {
+  font-family: "Roboto";
+  src: url("../fuentes/Roboto/Roboto-Regular.ttf");
+}
+/*VARIABLES*/
+>>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
 /*VERSION MOBILE*/
 .father-body {
   background: linear-gradient(88deg, #3a3d40 0%, #181719 100%);
@@ -39,18 +50,37 @@
   grid-area: head;
   background: linear-gradient(88deg, #ca6732 0%, #fc9c64 100%);
 }
+<<<<<<< HEAD
 .father-body #sectionhead .header-title-style, .father-body #sectionhead .header-slogan-style {
   color: rgb(255, 255, 255);
   font-family: "Roboto", sans-serif;
   text-align: center;
   font-size: 30px;
+=======
+.father-body #sectionhead .header-title-style {
+  color: rgb(255, 255, 255);
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  text-align: center;
+>>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
   animation-name: fade;
   animation-duration: 1s;
 }
 .father-body #sectionhead .header-slogan-style {
+<<<<<<< HEAD
   font-size: 15px;
   font-style: italic;
   font-weight: 200;
+=======
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+  font-weight: 200;
+  font-size: 15px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  animation-name: fade;
+  animation-duration: 1s;
+>>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
 }
 @keyframes fade {
   0% {
@@ -72,9 +102,15 @@
   text-align: center;
 }
 .father-body .navcontainer .menu-img-logo-style-size {
+<<<<<<< HEAD
   width: 30px;
   height: 30px;
   display: block;
+=======
+  display: block;
+  width: 30px;
+  height: 30px;
+>>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
   margin: 20px auto;
 }
 .father-body .navcontainer .menu-img-logo-style-size .menu-img-logo-style {
@@ -91,20 +127,31 @@
   transform: rotate(360deg);
 }
 .father-body .menu-list-style {
+<<<<<<< HEAD
   list-style-type: none;
+=======
+  list-style-type: square;
+>>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: space-evenly;
   animation-name: movimientomenu;
   animation-duration: 1.2s;
+<<<<<<< HEAD
   padding: 0px;
+=======
+>>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
 }
 .father-body .menu-list-style .menu-list-link-style {
   display: flex;
   justify-content: center;
   font-size: 0.6em;
+<<<<<<< HEAD
   color: rgb(255, 255, 255);
+=======
+  color: white;
+>>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
   border: solid 2px rgb(255, 255, 255);
   padding: 4px;
 }
@@ -193,12 +240,21 @@
   padding: 0px 10px;
 }
 .father-body #sectionvideos #containerGallery .main-container-cathegory-img-concept {
+<<<<<<< HEAD
   width: 100%;
   height: 100%;
 }
 .father-body #sectionvideos #containerGallery .main-container-cathegory-img-concept .main-category-img-concept {
   width: 100%;
   height: 100%;
+=======
+  height: 100%;
+  width: 100%;
+}
+.father-body #sectionvideos #containerGallery .main-container-cathegory-img-concept .main-category-img-concept {
+  height: 100%;
+  width: 100%;
+>>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
 }
 .father-body #sectionvideos .quienes-somos-p {
   font-family: "Roboto", sans-serif;
@@ -214,12 +270,21 @@
   padding: 10px;
 }
 .father-body #sectionvideos .containerArtQuienesSomos .main-categorie-img-container {
+<<<<<<< HEAD
   width: 100%;
   height: 100%;
 }
 .father-body #sectionvideos .containerArtQuienesSomos .main-categorie-img-container .main-categorie-img {
   width: 100%;
   height: 100%;
+=======
+  height: 100%;
+  width: 100%;
+}
+.father-body #sectionvideos .containerArtQuienesSomos .main-categorie-img-container .main-categorie-img {
+  height: 100%;
+  width: 100%;
+>>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
 }
 .father-body #sectionvideos .form-area-titles {
   font-family: "Roboto", sans-serif;
@@ -262,9 +327,15 @@
   align-items: center;
 }
 .father-body #sectionfooter .footer-area-list .footer-img-logo-container {
+<<<<<<< HEAD
   width: 30px;
   height: 30px;
   display: block;
+=======
+  display: block;
+  height: 30px;
+  width: 30px;
+>>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
   margin-right: 20px;
   margin-left: 20px;
 }
@@ -296,7 +367,11 @@
 /*ESTILOS TABLET CHICA*/
 /*ESTILOS TABLET CHICA*/
 @media (min-width: 479.6px) and (max-width: 699.5px) {
+<<<<<<< HEAD
   .father-body #sectionhead .header-title-style, .father-body #sectionhead .header-slogan-style {
+=======
+  .father-body #sectionhead .header-title-style {
+>>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
     font-size: 40px;
   }
   .father-body #sectionhead .header-slogan-style {
@@ -367,7 +442,11 @@
 /*TABLET GRANDE*/
 /*TABLET GRANDE*/
 @media (min-width: 699.6px) and (max-width: 1023.5px) {
+<<<<<<< HEAD
   .father-body #sectionhead .header-title-style, .father-body #sectionhead .header-slogan-style {
+=======
+  .father-body #sectionhead .header-title-style {
+>>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
     font-size: 40px;
   }
   .father-body #sectionhead .header-slogan-style {
@@ -451,7 +530,11 @@
   .father-body {
     background: linear-gradient(88deg, #28496a 0%, #6484fc 100%);
   }
+<<<<<<< HEAD
   .father-body #sectionhead .header-title-style, .father-body #sectionhead .header-slogan-style {
+=======
+  .father-body #sectionhead .header-title-style {
+>>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
     font-size: 50px;
   }
   .father-body #sectionhead .header-slogan-style {
