@@ -1,24 +1,14 @@
 /*FUENTE Y SELECTOR GLOBAL*/
 
-<<<<<<< HEAD
 @font-face {
   font-family: "Roboto";
   src: url("../fuentes/Roboto/Roboto-Regular.ttf");
 }
-=======
->>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-<<<<<<< HEAD
-=======
-@font-face {
-  font-family: "Roboto";
-  src: url("../fuentes/Roboto/Roboto-Regular.ttf");
-}
->>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
 
 /*VARIABLES*/
 $gris: #3a3d40;
@@ -27,7 +17,6 @@ $naranja: #ca6732;
 $naranjita: #fc9c64;
 $azul: #6484fc;
 $azulito: #28496a;
-<<<<<<< HEAD
 $minfontpx: 10px;
 
 /*MIXING*/
@@ -49,8 +38,6 @@ $mapa: (
     background-color: $valores;
   }
 }
-=======
->>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
 
 /*VERSION MOBILE*/
 .father-body {
@@ -76,33 +63,17 @@ $mapa: (
     .header-title-style {
       color: rgb(255, 255, 255);
       font-family: "Roboto", sans-serif;
-<<<<<<< HEAD
       text-align: center;
       font-size: $minfontpx * 3;
-=======
-      font-size: 30px;
-      text-align: center;
->>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
       animation-name: fade;
       animation-duration: 1s;
     }
 
     .header-slogan-style {
-<<<<<<< HEAD
       @extend .header-title-style;
       font-size: $minfontpx + 5;
       font-style: italic;
       font-weight: 200;
-=======
-      font-family: "Roboto", sans-serif;
-      font-style: italic;
-      font-weight: 200;
-      font-size: 15px;
-      text-align: center;
-      color: rgb(255, 255, 255);
-      animation-name: fade;
-      animation-duration: 1s;
->>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
     }
 
     @keyframes fade {
@@ -122,25 +93,16 @@ $mapa: (
     background: linear-gradient(88deg, $naranja 0%, $naranjita 100%);
     border-right: 1px solid #000000;
   }
-<<<<<<< HEAD
 
-=======
->>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
   .navcontainer {
     display: flex;
     flex-direction: column;
     text-align: center;
 
     .menu-img-logo-style-size {
-<<<<<<< HEAD
       @include sizestandart(30px, 30px);
       display: block;
 
-=======
-      display: block;
-      width: 30px;
-      height: 30px;
->>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
       margin: 20px auto;
 
       .menu-img-logo-style {
@@ -162,31 +124,20 @@ $mapa: (
   }
 
   .menu-list-style {
-<<<<<<< HEAD
     list-style-type: none;
-=======
-    list-style-type: square;
->>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: space-evenly;
     animation-name: movimientomenu;
     animation-duration: 1.2s;
-<<<<<<< HEAD
     padding: 0px;
-=======
->>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
 
     .menu-list-link-style {
       display: flex;
       justify-content: center;
       font-size: 0.6em;
-<<<<<<< HEAD
       color: rgb(255, 255, 255);
-=======
-      color: white;
->>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
       border: solid 2px rgb(255, 255, 255);
       padding: 4px;
     }
@@ -236,11 +187,7 @@ $mapa: (
     .main-area-titles {
       font-family: "Roboto", sans-serif;
       font-weight: 600;
-<<<<<<< HEAD
       font-size: calc($minfontpx * 2) + 5;
-=======
-      font-size: 25px;
->>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
       margin: 20px;
       color: rgb(255, 255, 255);
     }
@@ -253,11 +200,7 @@ $mapa: (
       font-family: "Roboto", sans-serif;
       margin: 10px 10px;
       padding: 10px 10px;
-<<<<<<< HEAD
       font-size: $minfontpx + 2;
-=======
-      font-size: 12px;
->>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
       color: white;
 
       .categorie-title:hover {
@@ -281,11 +224,7 @@ $mapa: (
     .main-area-titles {
       font-family: "Roboto", sans-serif;
       font-weight: 600;
-<<<<<<< HEAD
       font-size: calc($minfontpx * 2) + 5;
-=======
-      font-size: 25px;
->>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
       margin: 20px;
       color: rgb(255, 255, 255);
     }
@@ -299,28 +238,16 @@ $mapa: (
       padding: 0px 10px;
 
       .main-container-cathegory-img-concept {
-<<<<<<< HEAD
         @include sizestandart(100%, 100%);
         .main-category-img-concept {
           @include sizestandart(100%, 100%);
-=======
-        height: 100%;
-        width: 100%;
-        .main-category-img-concept {
-          height: 100%;
-          width: 100%;
->>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
         }
       }
     }
 
     .quienes-somos-p {
       font-family: "Roboto", sans-serif;
-<<<<<<< HEAD
       font-size: $minfontpx + 2;
-=======
-      font-size: 12px;
->>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
       margin: 20px;
       color: rgb(255, 255, 255);
     }
@@ -334,17 +261,9 @@ $mapa: (
       padding: 10px;
 
       .main-categorie-img-container {
-<<<<<<< HEAD
         @include sizestandart(100%, 100%);
         .main-categorie-img {
           @include sizestandart(100%, 100%);
-=======
-        height: 100%;
-        width: 100%;
-        .main-categorie-img {
-          height: 100%;
-          width: 100%;
->>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
         }
       }
     }
@@ -352,11 +271,7 @@ $mapa: (
     .form-area-titles {
       font-family: "Roboto", sans-serif;
       font-weight: 600;
-<<<<<<< HEAD
       font-size: $minfontpx + 8;
-=======
-      font-size: 18px;
->>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
       margin-left: 10px;
       padding: 10px;
       color: rgb(255, 255, 255);
@@ -368,11 +283,7 @@ $mapa: (
       width: 250px;
       .form-area-label {
         font-family: "Roboto", sans-serif;
-<<<<<<< HEAD
         font-size: $minfontpx + 4;
-=======
-        font-size: 14px;
->>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
         font-weight: 300;
         color: rgb(255, 255, 255);
       }
@@ -380,11 +291,7 @@ $mapa: (
     /*ESTE QUE SIGUE ES DE UNOS ESTILOS DE AYUDA*/
     .main-categories-tittle-help {
       font-family: "Roboto", sans-serif;
-<<<<<<< HEAD
       font-size: $minfontpx + 7;
-=======
-      font-size: 17px;
->>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
       margin: 0px 10px;
       padding: 10px 10px;
       color: white;
@@ -397,11 +304,7 @@ $mapa: (
 
     .footer-area-list {
       font-family: "Roboto", sans-serif;
-<<<<<<< HEAD
       font-size: $minfontpx + 2;
-=======
-      font-size: 12px;
->>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
       margin: 20px 0px 20px 0px;
       list-style-type: none;
       display: flex;
@@ -409,14 +312,8 @@ $mapa: (
       align-items: center;
 
       .footer-img-logo-container {
-<<<<<<< HEAD
         @include sizestandart(30px, 30px);
         display: block;
-=======
-        display: block;
-        height: 30px;
-        width: 30px;
->>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
         margin-right: 20px;
         margin-left: 20px;
 
@@ -441,11 +338,7 @@ $mapa: (
       }
 
       .footer-area-list:hover {
-<<<<<<< HEAD
         font-size: $minfontpx + 3;
-=======
-        font-size: 13px;
->>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
       }
 
       .footer-links-list {
@@ -480,12 +373,7 @@ $mapa: (
     #sectionmenu {
       .navcontainer {
         .menu-img-logo-style-size {
-<<<<<<< HEAD
           @include sizestandart(40px, 40px);
-=======
-          width: 40px;
-          height: 40px;
->>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
         }
       }
 
@@ -581,12 +469,7 @@ $mapa: (
     #sectionmenu {
       .navcontainer {
         .menu-img-logo-style-size {
-<<<<<<< HEAD
           @include sizestandart(40px, 40px);
-=======
-          width: 40px;
-          height: 40px;
->>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
         }
         .menu-list-style {
           .menu-list-link-style {
@@ -697,12 +580,7 @@ $mapa: (
     #sectionmenu {
       .navcontainer {
         .menu-img-logo-style-size {
-<<<<<<< HEAD
           @include sizestandart(50px, 50px);
-=======
-          width: 50px;
-          height: 50px;
->>>>>>> 754391ab886a4b2108ea3e4ba4585adb0fed10ac
         }
         .menu-list-style {
           .menu-list-link-style {
