@@ -1,0 +1,11 @@
+MODIFICACIONES SEO
+
+
+1.Intente reducir el tamaño de mis imagenes pero los compresores que utilice no 
+me las comprimian mas aun. Sin embargo, eliminé imagenes que tenia en el proyecto sin
+usar para reducir el tamaño del sitio.
+2.Agregue palabras claves a los heads de las paginas.
+3.Agregue titulos personalizados a cada pagina.
+4.Agregue Metaetiquetas de descripcion personalizada a cada sitio web.
+5.Mis encabezados estan jerarquizados.
+6. Agregue sitemap
