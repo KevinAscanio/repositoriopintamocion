@@ -201,6 +201,11 @@
   width: 100%;
   height: 100%;
 }
+.father-body #sectionvideos .containerArtQuienesSomos .main-categorie-img-container .main-categorie-img:hover {
+  animation-name: sizes;
+  animation-duration: 0.3s;
+  cursor: pointer;
+}
 .father-body #sectionvideos .form-area-titles {
   font-family: "Roboto", sans-serif;
   font-weight: 600;

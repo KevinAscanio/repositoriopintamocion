@@ -246,6 +246,12 @@ $minfontpx: 10px;
         .main-categorie-img {
           @include sizestandart(100%, 100%);
         }
+
+        .main-categorie-img:hover {
+          animation-name: sizes;
+          animation-duration: 0.3s;
+          cursor: pointer;
+        }
       }
     }
     /*ESTE CONTAINER DE ABAJO ES DE UNOS ESTILOS DE CONTACTO*/
