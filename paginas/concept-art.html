@@ -22,7 +22,7 @@
       type="image/x-icon"
     />
     <link rel="icon" href="../imagenes/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="cssboot/bootstrap.css" />
+    <link rel="stylesheet" href="../cssboot/bootstrap.css" />
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <!-- COMIENZA CUERPO-->
@@ -32,11 +32,10 @@
     <header id="sectionhead" class="header-style">
       <h1 class="header-title-style">Pintamocion</h1>
       <h2 class="header-slogan-style">Coloreamos emociones</h2>
-      <!-- MENU -->
     </header>
-
-    <aside id="sectionmenu" class="header-menu-style">
-      <nav class="navcontainer">
+    <!-- MENU -->
+    <nav id="sectionmenu" class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
         <a class="menu-img-logo-style-size" href="../index.html">
           <img
             class="menu-img-logo-style"
@@ -44,38 +43,31 @@
             alt="logo de pintamocion"
           />
         </a>
-        <ul class="menu-list-style">
-          <li>
-            <a class="menu-list-link-style" href="../index.html">Inicio</a>
-          </li>
-          <li>
-            <a class="menu-list-link-style" href="../index.html">Categoria 1</a>
-          </li>
-          <li>
-            <a class="menu-list-link-style" href="../index.html">Categoria 2</a>
-          </li>
-          <li>
-            <a class="menu-list-link-style" href="../index.html">Categoria 3</a>
-          </li>
-          <li>
-            <a class="menu-list-link-style" href="concept-art.html"
-              >Concept Art</a
-            >
-          </li>
-          <li>
-            <a class="menu-list-link-style" href="quienes-somos.html"
-              >Quienes Somos</a
-            >
-          </li>
-          <li>
-            <a class="menu-list-link-style" href="contacto.html"
-              >Contacto y Suscripcion</a
-            >
-          </li>
-          <li><a class="menu-list-link-style" href="ayuda.html">Ayuda</a></li>
-        </ul>
-      </nav>
-    </aside>
+        <a class="navbar-brand" href="../index.html">Inicio</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" href="../index.html">Categoria 1</a>
+            <a class="nav-link" href="../index.html">Categoria 2</a>
+            <a class="nav-link" href="../index.html">Categoria 3</a>
+            <a class="nav-link" href="concept-art.html">Concept Art</a>
+            <a class="nav-link" href="quienes-somos.html">Quienes Somos</a>
+            <a class="nav-link" href="contacto.html">Contacto y Suscripcion</a>
+            <a class="nav-link" href="ayuda.html">Ayuda</a>
+          </div>
+        </div>
+      </div>
+    </nav>
 
     <section id="sectionhero" class="main-area">
       <h2 class="main-area-titles">CONCEPT ART</h2>
@@ -180,5 +172,10 @@
       </ul>
     </footer>
     <script src="jsboot/bootstrap.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

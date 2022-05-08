@@ -31,10 +31,11 @@
 
       <h2 class="header-slogan-style">Coloreamos emociones</h2>
     </header>
-    <aside id="sectionmenu" class="header-menu-style">
-      <!-- COMIENZO MENU-->
 
-      <nav class="navcontainer">
+    <!-- COMIENZO MENU-->
+
+    <nav id="sectionmenu" class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
         <a class="menu-img-logo-style-size" href="index.html">
           <img
             class="menu-img-logo-style"
@@ -42,44 +43,37 @@
             alt="logo de pintamocion"
           />
         </a>
-
-        <ul class="menu-list-style">
-          <li>
-            <a class="menu-list-link-style" href="index.html">Inicio</a>
-          </li>
-          <li>
-            <a class="menu-list-link-style" href="#categoria1">Categoria 1</a>
-          </li>
-          <li>
-            <a class="menu-list-link-style" href="#categoria2">Categoria 2</a>
-          </li>
-          <li>
-            <a class="menu-list-link-style" href="#categoria3">Categoria 3</a>
-          </li>
-          <li>
-            <a class="menu-list-link-style" href="paginas/concept-art.html"
-              >Concept Art</a
-            >
-          </li>
-          <li>
-            <a class="menu-list-link-style" href="paginas/quienes-somos.html"
+        <a class="navbar-brand" href="index.html">Inicio</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" href="#categoria1">Categoria 1</a>
+            <a class="nav-link" href="#categoria2">Categoria 2</a>
+            <a class="nav-link" href="#categoria3">Categoria 3</a>
+            <a class="nav-link" href="paginas/concept-art.html">Concept Art</a>
+            <a class="nav-link" href="paginas/quienes-somos.html"
               >Quienes Somos</a
             >
-          </li>
-          <li>
-            <a class="menu-list-link-style" href="paginas/contacto.html"
+            <a class="nav-link" href="paginas/contacto.html"
               >Contacto y Suscripcion</a
             >
-          </li>
-          <li>
-            <a class="menu-list-link-style" href="paginas/ayuda.html">Ayuda</a>
-          </li>
-        </ul>
-      </nav>
-    </aside>
-
+            <a class="nav-link" href="paginas/ayuda.html">Ayuda</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- COMIENZO MAIN-->
     <section id="sectionhero" class="main-area">
-      <!-- COMIENZO MAIN-->
       <img
         class="main-hero-img"
         src="imagenes/Hero.png"

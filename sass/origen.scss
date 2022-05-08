@@ -26,19 +26,6 @@ $minfontpx: 10px;
   height: $alto;
 }
 
-/*EACH Y MAPA*/
-$mapa: (
-  primercolor: #d56,
-  segundocolor: #6cdd55,
-  tercercolor: #55c0dd,
-);
-
-@each $colores, $valores in $mapa {
-  .fondo-#{$colores} {
-    background-color: $valores;
-  }
-}
-
 /*VERSION MOBILE*/
 .father-body {
   background: linear-gradient(88deg, $gris 0%, $negro 100%);
@@ -47,13 +34,14 @@ $mapa: (
   display: grid;
 
   grid-template-areas:
-    "naveg head"
-    "naveg hero"
-    "naveg videos"
-    "naveg footer";
+    "head"
+    "naveg"
+    " hero"
+    " videos"
+    " footer";
 
-  grid-template-columns: 1fr 6fr;
-  grid-template-rows: 1fr 4fr 4fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 4fr 4fr 1fr;
 
   #sectionhead {
     grid-area: head;
@@ -90,89 +78,65 @@ $mapa: (
   #sectionmenu {
     grid-area: naveg;
     font-family: "Roboto", sans-serif;
-    background: linear-gradient(88deg, $naranja 0%, $naranjita 100%);
-    border-right: 1px solid #000000;
-  }
+    background-color: rgb(255, 255, 255);
 
-  .navcontainer {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+    .container-fluid {
+      animation-name: movimientomenu;
+      animation-duration: 1.2s;
+      .menu-img-logo-style-size {
+        @include sizestandart(40px, 40px);
+        display: inline-block;
 
-    .menu-img-logo-style-size {
-      @include sizestandart(30px, 30px);
-      display: block;
+        margin: 0px 20px;
 
-      margin: 20px auto;
+        .menu-img-logo-style {
+          max-width: 100%;
+          max-height: 100%;
+          margin: 0 auto;
+          border: 2px solid $azul;
+          border-radius: 100%;
+        }
 
-      .menu-img-logo-style {
-        max-width: 100%;
-        max-height: 100%;
-        margin: 0 auto;
-        border: 2px solid $azul;
-        border-radius: 50%;
+        .menu-img-logo-style {
+          transition: 0.5s;
+        }
+
+        .menu-img-logo-style:hover {
+          transform: rotate(360deg);
+        }
       }
 
-      .menu-img-logo-style {
-        transition: 0.5s;
+      .navbar-brand {
+        transition: font-size 0.3s;
       }
 
-      .menu-img-logo-style:hover {
-        transform: rotate(360deg);
+      .navbar-brand:hover {
+        font-size: 1.5em;
       }
-    }
-  }
+      .collapse {
+        .navbar-nav {
+          .nav-link {
+            transition: font-size 0.3s;
+          }
 
-  .menu-list-style {
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: space-evenly;
-    animation-name: movimientomenu;
-    animation-duration: 1.2s;
-    padding: 0px;
-
-    .menu-list-link-style {
-      display: flex;
-      justify-content: center;
-      font-size: 0.6em;
-      color: rgb(255, 255, 255);
-      border: solid 2px rgb(255, 255, 255);
-      padding: 4px;
-    }
-
-    .menu-list-link-style {
-      transition: font-size 0.3s;
-    }
-
-    .menu-list-link-style:hover {
-      font-size: 0.67em;
+          .nav-link:hover {
+            font-size: 1.1em;
+          }
+        }
+      }
     }
   }
 
   @keyframes movimientomenu {
     0% {
-      transform: translateY(110vh);
+      transform: translateX(110vw);
     }
     100% {
-      transform: translateY(0px);
+      transform: translateX(0px);
     }
-  }
-
-  .menu-list-link-style {
-    transition: font-size 0.3s;
-  }
-
-  .menu-list-link-style:hover {
-    font-size: 0.75em;
   }
 
   /* Tengo una duda sobre esta categoria que esta mas abajo como puedo reescribirla! pero haciendo nesting recuerda preguntar*/
-
-  aside > nav > ul > li {
-    margin: 10px;
-  }
 
   #sectionhero {
     grid-area: hero;
@@ -369,23 +333,6 @@ $mapa: (
         font-size: 20px;
       }
     }
-
-    #sectionmenu {
-      .navcontainer {
-        .menu-img-logo-style-size {
-          @include sizestandart(40px, 40px);
-        }
-      }
-
-      .menu-list-style {
-        .menu-list-link-style {
-          font-size: 0.7em;
-        }
-        .menu-list-link-style:hover {
-          font-size: 0.75em;
-        }
-      }
-    }
     #sectionhero {
       .main-area-titles {
         font-size: 30px;
@@ -398,14 +345,12 @@ $mapa: (
       }
       /*ESTE CONTAINER DE ABAJO ES DE UNOS ESTILOS DE CONCEPT ART*/
       #containerGallery {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
 
         .main-container-cathegory-img-concept {
-          height: 100%;
-          width: 100%;
+          @include sizestandart(100%, 100%);
           .main-category-img-concept {
-            height: 100%;
-            width: 100%;
+            @include sizestandart(100%, 100%);
           }
         }
       }
@@ -466,24 +411,6 @@ $mapa: (
       }
     }
 
-    #sectionmenu {
-      .navcontainer {
-        .menu-img-logo-style-size {
-          @include sizestandart(40px, 40px);
-        }
-        .menu-list-style {
-          .menu-list-link-style {
-            font-size: 1em;
-            padding: 6px;
-          }
-
-          .menu-list-link-style:hover {
-            font-size: 18px;
-          }
-        }
-      }
-    }
-
     #sectionhero {
       .main-area-titles {
         font-size: 30px;
@@ -499,11 +426,9 @@ $mapa: (
         grid-template-columns: 1fr 1fr 1fr 1fr;
 
         .main-container-cathegory-img-concept {
-          height: 100%;
-          width: 100%;
+          @include sizestandart(100%, 100%);
           .main-category-img-concept {
-            height: 100%;
-            width: 100%;
+            @include sizestandart(100%, 100%);
           }
         }
       }
@@ -577,28 +502,6 @@ $mapa: (
       }
     }
 
-    #sectionmenu {
-      .navcontainer {
-        .menu-img-logo-style-size {
-          @include sizestandart(50px, 50px);
-        }
-        .menu-list-style {
-          .menu-list-link-style {
-            padding: 0px;
-            font-size: 16px;
-          }
-
-          .menu-list-link-style {
-            transition: font-size 0.3s;
-          }
-
-          .menu-list-link-style:hover {
-            font-size: 20px;
-          }
-        }
-      }
-    }
-
     #sectionhero {
       .main-area-titles {
         font-size: 40px;
@@ -614,11 +517,9 @@ $mapa: (
         grid-template-columns: 1fr 1fr 1fr 1fr;
 
         .main-container-cathegory-img-concept {
-          height: 100%;
-          width: 100%;
+          @include sizestandart(100%, 100%);
           .main-category-img-concept {
-            height: 100%;
-            width: 100%;
+            @include sizestandart(100%, 100%);
           }
         }
       }
