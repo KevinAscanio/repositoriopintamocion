@@ -206,6 +206,23 @@ $minfontpx: 10px;
         .main-category-img-concept {
           @include sizestandart(100%, 100%);
         }
+
+        .main-category-img-concept:hover {
+          animation-name: sizes;
+          animation-duration: 0.3s;
+          cursor: pointer;
+        }
+        @keyframes sizes {
+          0% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-3px);
+          }
+          100% {
+            transform: translateY(0px);
+          }
+        }
       }
     }
 
